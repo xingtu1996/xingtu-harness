@@ -1,0 +1,24 @@
+[submodule "xingtu-skills"]
+	path = xingtu-skills
+	url = git@github.com:xingtu1996/xingtu-skills.git
+[submodule "xingtu-hooks"]
+	path = xingtu-hooks
+	url = git@github.com:xingtu1996/xingtu-hooks.git
+[submodule "xingtu-rules"]
+	path = xingtu-rules
+	url = git@github.com:xingtu1996/xingtu-rules.git
+[submodule "xingtu-sdd"]
+	path = xingtu-sdd
+	url = git@github.com:xingtu1996/xingtu-sdd.git
+[submodule "xingtu-mcps"]
+	path = xingtu-mcps
+	url = git@github.com:xingtu1996/xingtu-mcps.git
+[submodule "xingtu-cli"]
+	path = xingtu-cli
+	url = git@github.com:xingtu1996/xingtu-cli.git
+[submodule "xingtu-tools"]
+	path = xingtu-tools
+	url = git@github.com:xingtu1996/xingtu-tools.git
+[submodule "tokenhub-bench"]
+	path = tokenhub-bench
+	url = git@github.com:xingtu1996/tokenhub-bench.git

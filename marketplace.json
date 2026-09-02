@@ -1,0 +1,26 @@
+{
+  "name": "xingtu-harness",
+  "version": "0.1.0",
+  "description": "Central aggregator for XingTu open-source AI engineering assets",
+  "maintainer": "xingtu1996",
+  "license": "MIT",
+  "scenes": [
+    { "id": "presale", "name": "售前支持", "submodules": ["xingtu-sdd", "xingtu-skills"] },
+    { "id": "admin", "name": "行政事务", "submodules": ["xingtu-rules", "xingtu-skills"] },
+    { "id": "coding-0to1", "name": "新项目从零搭建", "submodules": ["xingtu-skills", "xingtu-hooks", "xingtu-sdd"] },
+    { "id": "coding-1ton", "name": "存量项目迭代", "submodules": ["xingtu-skills", "xingtu-hooks", "xingtu-rules"] },
+    { "id": "monolith", "name": "单体项目", "submodules": ["xingtu-skills", "xingtu-cli"] },
+    { "id": "microservice", "name": "微服务项目", "submodules": ["xingtu-skills", "xingtu-rules", "xingtu-mcps"] },
+    { "id": "finance", "name": "财务场景", "submodules": ["xingtu-rules", "xingtu-sdd"] }
+  ],
+  "submodules": {
+    "xingtu-skills": { "url": "https://github.com/xingtu1996/xingtu-skills.git", "description": "AI Agent 技能库" },
+    "xingtu-hooks": { "url": "https://github.com/xingtu1996/xingtu-hooks.git", "description": "Claude Code 钩子" },
+    "xingtu-rules": { "url": "https://github.com/xingtu1996/xingtu-rules.git", "description": "规则工程化" },
+    "xingtu-sdd": { "url": "https://github.com/xingtu1996/xingtu-sdd.git", "description": "SDD 规格方法论" },
+    "xingtu-mcps": { "url": "https://github.com/xingtu1996/xingtu-mcps.git", "description": "MCP 服务" },
+    "xingtu-cli": { "url": "https://github.com/xingtu1996/xingtu-cli.git", "description": "命令行工具" },
+    "xingtu-tools": { "url": "https://github.com/xingtu1996/xingtu-tools.git", "description": "工程脚本" },
+    "tokenhub-bench": { "url": "https://github.com/xingtu1996/tokenhub-bench.git", "description": "模型评测" }
+  }
+}

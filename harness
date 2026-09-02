@@ -1,0 +1,61 @@
+#!/usr/bin/env bash
+# XingTu Harness CLI：场景安装 / 子模块管理
+set -euo pipefail
+
+COMMAND="${1:-help}"
+
+list_scenes() {
+  echo "可用场景:"
+  echo "  presale         售前支持"
+  echo "  admin           行政事务"
+  echo "  coding-0to1     新项目从零搭建"
+  echo "  coding-1ton     存量项目迭代"
+  echo "  monolith        单体项目"
+  echo "  microservice    微服务项目"
+  echo "  finance         财务场景"
+}
+
+case "$COMMAND" in
+  list)
+    list_scenes
+    ;;
+  install)
+    SCENE="${2:-}"
+    if [ -z "$SCENE" ]; then
+      echo "用法: ./harness install scene:<id>"
+      list_scenes
+      exit 1
+    fi
+    SCENE_ID="${SCENE#scene:}"
+    echo "安装场景: $SCENE_ID"
+    case "$SCENE_ID" in
+      presale)      SUBMODS="xingtu-sdd xingtu-skills" ;;
+      admin)        SUBMODS="xingtu-rules xingtu-skills" ;;
+      coding-0to1)  SUBMODS="xingtu-skills xingtu-hooks xingtu-sdd" ;;
+      coding-1ton)  SUBMODS="xingtu-skills xingtu-hooks xingtu-rules" ;;
+      monolith)     SUBMODS="xingtu-skills xingtu-cli" ;;
+      microservice) SUBMODS="xingtu-skills xingtu-rules xingtu-mcps" ;;
+      finance)      SUBMODS="xingtu-rules xingtu-sdd" ;;
+      *) echo "未知场景: $SCENE_ID"; list_scenes; exit 1 ;;
+    esac
+    for m in $SUBMODS; do
+      echo "  拉取 $m ..."
+      git submodule update --init "$m"
+    done
+    echo "✓ 场景 $SCENE_ID 安装完成"
+    ;;
+  status)
+    git submodule status
+    ;;
+  update)
+    git submodule update --remote --merge
+    ;;
+  *)
+    echo "XingTu Harness"
+    echo "用法:"
+    echo "  ./harness list                查看场景"
+    echo "  ./harness install scene:<id>  安装场景"
+    echo "  ./harness status              子模块状态"
+    echo "  ./harness update              更新全部子模块"
+    ;;
+esac
