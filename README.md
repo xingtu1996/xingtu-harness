@@ -12,6 +12,10 @@
 
 **给谁用**：技术管理者、一线工程师、AI 工程化实践者——想快速搭起一套可用的 Agent/Skill 工作台，不用从零踩坑。
 
+## 🧩 与 DeepSeek Harness（DSH）的关系
+
+本仓与 DeepSeek Harness（DSH，「一切皆插件」的 Agent 运行时）互为补充：DSH 提供可插拔的运行时底座，本仓提供经过生产验证的 **skills / hooks / rules / specs / MCP / CLI** 资产，可直接在 DSH 之上组装使用。各子仓均标注 DSH 兼容格式。
+
 ## 🚀 快速开始
 
 ### 方式一：一键拉全（推荐）
