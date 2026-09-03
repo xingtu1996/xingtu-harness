@@ -2,7 +2,10 @@
 
 > **一个仓库，一键拿到全部行途开源资产。** 聚合自有 + 市面优秀开源，按领域场景开箱即用。
 
-![MIT](https://img.shields.io/badge/license-MIT-green.svg)
+![License](https://img.shields.io/badge/license-MIT-green.svg)
+![Submodules](https://img.shields.io/badge/submodules-8-blue.svg)
+![Scenarios](https://img.shields.io/badge/scenarios-7-purple.svg)
+![Git Submodule](https://img.shields.io/badge/vcs-git%20submodule-orange.svg)
 
 ---
 
@@ -52,11 +55,10 @@ cd xingtu-harness
 
 ## 📦 聚合的子模块
 
-本仓通过 git submodule 引用以下独立仓库（各自可独立分发、独立收藏）：
+本仓通过 git submodule 引用以下 **8 个**独立仓库（各自可独立分发、独立收藏）：
 
 | 子模块 | 说明 |
 |--------|------|
-| [xingtu-ai-engineering](https://github.com/xingtu1996/xingtu-ai-engineering) | ⭐ 方法论旗舰仓：理念/方法/五大工程/治理/会话/样板 |
 | [xingtu-skills](https://github.com/xingtu1996/xingtu-skills) | AI Agent 技能库 |
 | [xingtu-hooks](https://github.com/xingtu1996/xingtu-hooks) | Claude Code 钩子 |
 | [xingtu-rules](https://github.com/xingtu1996/xingtu-rules) | 规则工程化 |
@@ -65,6 +67,8 @@ cd xingtu-harness
 | [xingtu-cli](https://github.com/xingtu1996/xingtu-cli) | 命令行工具 |
 | [xingtu-tools](https://github.com/xingtu1996/xingtu-tools) | 工程脚本 |
 | [tokenhub-bench](https://github.com/xingtu1996/tokenhub-bench) | 模型评测 |
+
+> ⭐ **关联旗舰仓（独立仓库，非 submodule）**：[xingtu-ai-engineering](https://github.com/xingtu1996/xingtu-ai-engineering) — 方法论旗舰仓：理念/方法/五大工程/治理/会话/样板
 
 ## 🤖 AI 可检索
 
@@ -78,7 +82,3 @@ cat marketplace.json
 ## 📄 许可证
 
 MIT License。所有聚合资产版权归各自仓库作者，引用时请保留上游 LICENSE。
-
----
-
-> AI 辅助创作 · 内容基于真实工程实践
