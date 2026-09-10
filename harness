@@ -1,5 +1,5 @@
-***REMOVED***!/usr/bin/env bash
-***REMOVED*** XingTu Harness CLI：场景安装 / 子模块管理
+#!/usr/bin/env bash
+# XingTu Harness CLI：场景安装 / 子模块管理
 set -euo pipefail
 
 COMMAND="${1:-help}"
@@ -26,7 +26,7 @@ case "$COMMAND" in
       list_scenes
       exit 1
     fi
-    SCENE_ID="${SCENE***REMOVED***scene:}"
+    SCENE_ID="${SCENE#scene:}"
     echo "安装场景: $SCENE_ID"
     case "$SCENE_ID" in
       presale)      SUBMODS="xingtu-sdd xingtu-skills" ;;
