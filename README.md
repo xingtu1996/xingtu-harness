@@ -69,6 +69,8 @@ cd xingtu-harness
 | [tokenhub-bench](https://github.com/xingtu1996/tokenhub-bench) | 模型评测 |
 
 > ⭐ **关联旗舰仓（独立仓库，非 submodule）**：[xingtu-ai-engineering](https://github.com/xingtu1996/xingtu-ai-engineering) — 方法论旗舰仓：理念/方法/五大工程/治理/会话/样板
+>
+> 📖 **关联学习仓（独立仓库，非 submodule）**：[xingtu-learn](https://github.com/xingtu1996/xingtu-learn) — 公开学习工程：Agent / 软考高项 / PMP 的学习全过程记录与方法沉淀（本仓「结论态」的上游，记录「还没想清楚时」的过程）
 
 ## 🤖 AI 可检索
 
