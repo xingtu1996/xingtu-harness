@@ -7,6 +7,10 @@
 ![Scenarios](https://img.shields.io/badge/scenarios-7-purple.svg)
 ![Git Submodule](https://img.shields.io/badge/vcs-git%20submodule-orange.svg)
 
+## 📖 延伸阅读
+
+- [Harness：工具还是规则？AI 工程化认知阶梯](https://github.com/xingtu1996/xingtu-articles/blob/main/articles/2026/09/2026-09-05-harness-cognition.md) —— 本仓设计认知的完整论述
+
 ---
 
 ## 🎯 这是什么
