@@ -1,6 +1,6 @@
-# XingTu Harness · 一线 AI 工程化脚手架
+# 行途技术 Harness · 一线 AI 工程化脚手架
 
-> **一个仓库，一键拿到全部行途开源资产。** 聚合自有 + 市面优秀开源，按领域场景开箱即用。
+> **一个仓库，一键拿到全部行途技术开源资产。** 聚合自有 + 市面优秀开源，按领域场景开箱即用。
 
 ![License](https://img.shields.io/badge/license-MIT-green.svg)
 ![Submodules](https://img.shields.io/badge/submodules-8-blue.svg)
@@ -15,7 +15,7 @@
 
 ## 🎯 这是什么
 
-`xingtu-harness` 是行途开源矩阵的**中央聚合仓**。它不是又一个工具，而是把散落在独立仓库里的 AI 工程资产（skills / hooks / rules / specs / MCP / CLI / 工具）通过 **git submodule** 聚合到一起，并按**领域场景**提供开箱即用的脚手架。
+`xingtu-harness` 是行途技术开源矩阵的**中央聚合仓**。它不是又一个工具，而是把散落在独立仓库里的 AI 工程资产（skills / hooks / rules / specs / MCP / CLI / 工具）通过 **git submodule** 聚合到一起，并按**领域场景**提供开箱即用的脚手架。
 
 **给谁用**：技术管理者、一线工程师、AI 工程化实践者——想快速搭起一套可用的 Agent/Skill 工作台，不用从零踩坑。
 
@@ -91,11 +91,11 @@ MIT License。所有聚合资产版权归各自仓库作者，引用时请保留
 
 ---
 
-## 📡 关于作者 · 行途
+## 📡 关于作者 · 行途技术
 
-我是**行途**，一线技术经理 + 仍在写代码。
+我是**行途技术**，一线技术经理 + 仍在写代码。
 
-- 🔔 公众号 **「行途 XingTu」**：微信搜索关注，看 AI 工程化落地实战
+- 🔔 公众号 **「行途技术」**：微信搜索关注，看 AI 工程化落地实战
 - 🌐 博客 / 作品集：https://xingtu1996.github.io
 
 如果这份仓库对你有帮助，欢迎在公众号留言交流 🙌
