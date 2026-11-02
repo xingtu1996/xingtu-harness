@@ -52,6 +52,15 @@ Goal Interface (Chat/CLI/API/Webhook)
 
 **引用声明**：上游明确标为 *research prototype*，不是正式 DeepSeek 产品或生产级产品；公开代码不完全等同于文章设计，一些能力尚未实现。此处是借鉴和对比，不宣称论文原创、官方合作、实现兼容或直接复刻。使用上游代码时须核对其 MIT 许可及保留署名；当前实验为独立最小实现，尚未复制上游代码。
 
+
+## 与 Super Agent 的组合关系（核心设计立场）
+
+**概念公式：Super Agent 能力体系 ≈ LLM + Harness + Event Bridge / Orchestrator（行途协同扩展）**。
+
+这不是 DeepSeek 官方的数学定义，也不是替代或重写其 Super Agent。LLM 负责理解与推理，Harness 提供工具、Skill、执行环境和约束；行途的 Event Bridge / Orchestrator 是用于组合**已有** Super Agent 和其他工具的跨产品协作补充层，关注目标对齐、专业分工、状态交接、回执、失败恢复及权限治理。一个厂商的 Super Agent 可以作为我们的一个执行能力，也可以是用户的任务入口。
+
+我们将基于 DeepSeek Super Agent 的设计哲学与实践持续演进，但不会宣称已经实现所有平台互通，或把其官方架构误写成由行途提出的公式。具体设计与 Mermaid 架构图见 [设计哲学](./PHILOSOPHY.md) 和 [可发布技术文章草案](./ARTICLE_DRAFT.md)。
+
 ## 与行途开源矩阵的关系
 
 - `xingtu-harness`：安装聚合、入口和可复用工程资产。
