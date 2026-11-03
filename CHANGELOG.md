@@ -9,3 +9,7 @@
 - 本轮合入 XGT-GOV-001 guardrails（PR #3），跟进 6 个子模块 gitlink 至各自远端 HEAD（巡检第28轮跟进）。
 
 doubao
+
+
+## 2026-11-04
+- docs(research): 新增《Harness 内化专题研究》`docs/research/harness-internalization-2026-11.md`（三轨道/五机制/七启示，31 篇文献三级标注），分支 docs/harness-internalization-2026-11，commit 8ca91cf
