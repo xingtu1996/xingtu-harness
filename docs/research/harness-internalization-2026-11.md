@@ -52,6 +52,7 @@
 - 《Beyond Pipelines: A Survey of the Paradigm Shift toward Model-native Agentic AI》（北交大，arXiv 2510.16720，2025-10）：明确提出 **model-native 范式**——planning / tool use / memory 正从"外部脚本化模块"演变为"端到端学习进参数的行为"；RL 是引擎（LLM+RL+R+L）；并指出多 agent 协作、反思等能力也在被内化。文中有句话值得刻下来：**"从构建应用智能的系统，转向培育通过经验增长智能的模型。"**（已查证）
 - 《The Landscape of Agentic Reinforcement Learning for LLMs: A Survey》（牛津等，arXiv 2509.02547，2025-09）：500+ 篇综述，RL 是把能力从"静态启发式模块"转成"自适应 agent 行为"的关键机制。（已查证）
 - 《Toolformer》（Schick 等，Meta，arXiv 2302.04761，2023-02）：模型可以自学工具调用——工具能力本身可以被训练进模型，而不必永远依赖外部脚手架。（已查证）
+- 《Harness-Zero: Harness Distillation via Agent-as-Harness》（arXiv 2609.24974，2026-09）：**把 harness 直接蒸馏进模型权重的实证**——用 "agent-as-harness" 机制把优化 harness 的指导转成训练演示，微调后部署时移除专用 harness：基座模型 macro-average 任务成功率从 23.3% 提到 44.3%，甚至超过仍带着该 harness 的 41.7%，28 个 harness 诱导行为平均恢复 82.3%。**一句话：harness 的能力一旦被权重内化，外部 harness 可以退场，模型反而更强。**（已查证）
 - **对行途的含义**：我们现在装进 harness 的每一条规则、每一次纠偏、每一个 bad-case，都是未来蒸馏 / RL 的候选语料。harness 不只是运行环境，是"权重内化的预科班"。（推论，非文献原话）
 
 ### 2.3 组织轨道：规则已经内化为"行途协议"
@@ -184,41 +185,42 @@
 3. Externalization in LLM Agents: A Unified Review of Memory, Skills, Protocols and Harness Engineering — arXiv 2604.08224（已查证）https://arxiv.org/pdf/2604.08224v1
 4. The Landscape of Agentic Reinforcement Learning for LLMs: A Survey — arXiv 2509.02547（已查证）https://arxiv.org/pdf/2509.02547
 5. Toolformer: Language Models Can Teach Themselves to Use Tools — arXiv 2302.04761（已查证）https://arxiv.org/pdf/2302.04761
+6. Harness-Zero: Harness Distillation via Agent-as-Harness — arXiv 2609.24974（已查证）https://arxiv.org/pdf/2609.24974
 
 **上下文工程 / 指令预算**
-6. A Survey of Context Engineering for Large Language Models — arXiv 2507.13334（已查证）https://arxiv.org/pdf/2507.13334
-7. Context Engineering: Designing the Information, Memory, and Control Environment — ETIS WP-009（已查证）https://etisframework.org/assets/publications/white-papers/ETIS_WP-009_Context_Engineering.pdf
-8. Lost in the Middle: How Language Models Use Long Contexts — TACL 2024（已查证）https://preview.aclanthology.org/ingest-jclib/2024.tacl-1.9.pdf
-9. Anthropic: Effective context engineering for AI agents（已查证）https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents
-10. Where Agent Orchestration Breaks — Proforma Research（已查证）https://proforma.global/wp-content/uploads/proforma-research/pdfs/where-agent-orchestration-breaks.pdf
-11. leanharness — npm（二手）https://www.npmjs.com/package/leanharness
-12. The Context Paradox — dev.to（二手）https://dev.to/tamizuddin/the-context-paradox-why-more-ai-instructions-are-making-your-coding-agents-dumber-and-how-to-fix-22pc
+7. A Survey of Context Engineering for Large Language Models — arXiv 2507.13334（已查证）https://arxiv.org/pdf/2507.13334
+8. Context Engineering: Designing the Information, Memory, and Control Environment — ETIS WP-009（已查证）https://etisframework.org/assets/publications/white-papers/ETIS_WP-009_Context_Engineering.pdf
+9. Lost in the Middle: How Language Models Use Long Contexts — TACL 2024（已查证）https://preview.aclanthology.org/ingest-jclib/2024.tacl-1.9.pdf
+10. Anthropic: Effective context engineering for AI agents（已查证）https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents
+11. Where Agent Orchestration Breaks — Proforma Research（已查证）https://proforma.global/wp-content/uploads/proforma-research/pdfs/where-agent-orchestration-breaks.pdf
+12. leanharness — npm（二手）https://www.npmjs.com/package/leanharness
+13. The Context Paradox — dev.to（二手）https://dev.to/tamizuddin/the-context-paradox-why-more-ai-instructions-are-making-your-coding-agents-dumber-and-how-to-fix-22pc
 
 **组件干扰 / 编排成本**
-13. More Is Not Always Better: Cross-Component Interference in LLM Agent Scaffolding — arXiv 2605.05716（已查证）https://arxiv.org/pdf/2605.05716
-14. Instruction Bleed: Cross-Module Interference in Prompt-Composed Agentic Systems — arXiv 2606.26356（已查证）https://arxiv.org/pdf/2606.26356
-15. Why Do Multi-Agent LLM Systems Fail? — arXiv 2503.13657（已查证）https://arxiv.org/pdf/2503.13657
-16. Multi-Agent Teams Hold Experts Back — Stanford/Apple，arXiv 2602.01011（已查证）https://arxiv.org/pdf/2602.01011
-17. Single-agent or Multi-agent Systems? Why Not Both? — arXiv 2505.18286（已查证）https://arxiv.org/pdf/2505.18286
-18. The Evolution of the Agent Harness — Latent.Space（已查证）https://www.latent.space/p/attention-interface
-19. Anthropic: Building Effective AI Agents（已查证）https://www.anthropic.com/engineering/building-effective-agents
+14. More Is Not Always Better: Cross-Component Interference in LLM Agent Scaffolding — arXiv 2605.05716（已查证）https://arxiv.org/pdf/2605.05716
+15. Instruction Bleed: Cross-Module Interference in Prompt-Composed Agentic Systems — arXiv 2606.26356（已查证）https://arxiv.org/pdf/2606.26356
+16. Why Do Multi-Agent LLM Systems Fail? — arXiv 2503.13657（已查证）https://arxiv.org/pdf/2503.13657
+17. Multi-Agent Teams Hold Experts Back — Stanford/Apple，arXiv 2602.01011（已查证）https://arxiv.org/pdf/2602.01011
+18. Single-agent or Multi-agent Systems? Why Not Both? — arXiv 2505.18286（已查证）https://arxiv.org/pdf/2505.18286
+19. The Evolution of the Agent Harness — Latent.Space（已查证）https://www.latent.space/p/attention-interface
+20. Anthropic: Building Effective AI Agents（已查证）https://www.anthropic.com/engineering/building-effective-agents
 
 **顺从 / 约束 / 规则博弈**
-20. Simple Synthetic Data Reduces Sycophancy in Large Language Models — arXiv 2308.03958（已查证）https://arxiv.org/pdf/2308.03958
-21. Beacon: Single-Turn Diagnosis and Mitigation of Latent Sycophancy — arXiv 2510.16727（已查证）https://arxiv.org/abs/2510.16727
-22. Discovering Language Model Behaviors with Model-Written Evaluations — ACL 2023 Findings（已查证）https://aclanthology.org/2023.findings-acl.847.pdf
-23. Safety Under Scaffolding — arXiv 2603.10044（已查证）https://arxiv.org/pdf/2603.10044v2
-24. Demonstrating specification gaming in reasoning models — arXiv 2502.13295（已查证）https://arxiv.org/pdf/2502.13295
-25. Why your agents need a constitution, not a prompt — dev.to（二手）https://dev.to/alex_aslam/why-your-agents-need-a-constitution-not-a-prompt-2181
+21. Simple Synthetic Data Reduces Sycophancy in Large Language Models — arXiv 2308.03958（已查证）https://arxiv.org/pdf/2308.03958
+22. Beacon: Single-Turn Diagnosis and Mitigation of Latent Sycophancy — arXiv 2510.16727（已查证）https://arxiv.org/abs/2510.16727
+23. Discovering Language Model Behaviors with Model-Written Evaluations — ACL 2023 Findings（已查证）https://aclanthology.org/2023.findings-acl.847.pdf
+24. Safety Under Scaffolding — arXiv 2603.10044（已查证）https://arxiv.org/pdf/2603.10044v2
+25. Demonstrating specification gaming in reasoning models — arXiv 2502.13295（已查证）https://arxiv.org/pdf/2502.13295
+26. Why your agents need a constitution, not a prompt — dev.to（二手）https://dev.to/alex_aslam/why-your-agents-need-a-constitution-not-a-prompt-2181
 
 **技能库 / 自改进（正面案例）**
-26. VOYAGER: An Open-Ended Embodied Agent with Large Language Models — arXiv 2305.16291（已查证）https://arxiv.org/pdf/2305.16291v1
-27. Position: Truly Self-Improving Agents Require Intrinsic Metacognitive Learning — arXiv 2506.05109（已查证）https://arxiv.org/pdf/2506.05109v1
-28. After the fine-tune: what agent scaffolding does that training cannot — Sagar Bharambe（已查证）https://sagarbharambe.com/writing/after-the-fine-tune-agent-scaffolding
+27. VOYAGER: An Open-Ended Embodied Agent with Large Language Models — arXiv 2305.16291（已查证）https://arxiv.org/pdf/2305.16291v1
+28. Position: Truly Self-Improving Agents Require Intrinsic Metacognitive Learning — arXiv 2506.05109（已查证）https://arxiv.org/pdf/2506.05109v1
+29. After the fine-tune: what agent scaffolding does that training cannot — Sagar Bharambe（已查证）https://sagarbharambe.com/writing/after-the-fine-tune-agent-scaffolding
 
 **ICL 机制（辅助）**
-29. SKiC: Skills-in-Context Prompting — ICLR 2024 在审（已查证）https://openreview.net/pdf?id=s1ByDEbpI8
-30. Structured Prompting: Scaling In-Context Learning to 1,000 Examples — arXiv 2212.06713（已查证）https://arxiv.org/pdf/2212.06713
+30. SKiC: Skills-in-Context Prompting — ICLR 2024 在审（已查证）https://openreview.net/pdf?id=s1ByDEbpI8
+31. Structured Prompting: Scaling In-Context Learning to 1,000 Examples — arXiv 2212.06713（已查证）https://arxiv.org/pdf/2212.06713
 
 ---
 
