@@ -14,6 +14,17 @@ class BridgeTests(unittest.TestCase):
         self.assertIsNone(b.process("t1"))
         self.assertEqual(b.side_effects, 1)
 
+    def test_duplicate_payload_conflict_is_rejected(self):
+        b = Bridge()
+        b.submit("dup", "content", "r1", "原始目标")
+        with self.assertRaisesRegex(ValueError, "conflicting duplicate"):
+            b.submit("dup", "content", "r1", "不同目标")
+        with self.assertRaisesRegex(ValueError, "conflicting duplicate"):
+            b.submit("dup", "content", "r1", "原始目标", approval_required=True)
+        self.assertEqual(b.tasks["dup"]["objective"], "原始目标")
+        self.assertEqual(b.tasks["dup"]["state"], "queued")
+        self.assertEqual(b.side_effects, 0)
+
     def test_t2_review_sha(self):
         b = Bridge()
         b.submit("t2", "code_review", "commit-abc", "代码审核")
