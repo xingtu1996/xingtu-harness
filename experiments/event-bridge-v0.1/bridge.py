@@ -20,6 +20,10 @@ class Bridge:
             raise ValueError("missing task fields")
         key = (task_id, "submit", revision)
         if key in self.seen:
+            current = self.tasks[task_id]
+            if (current["kind"] != kind or current["objective"] != objective
+                    or current["approval_required"] != approval_required):
+                raise ValueError("conflicting duplicate task submission")
             return False
         if task_id in self.tasks:
             raise ValueError("task_id reused with different revision")
