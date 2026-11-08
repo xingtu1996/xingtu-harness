@@ -1,0 +1,27 @@
+name: Event Bridge offline tests
+
+on:
+  pull_request:
+    paths:
+      - 'experiments/event-bridge-v0.1/**'
+      - '.github/workflows/event-bridge-offline.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'experiments/event-bridge-v0.1/**'
+      - '.github/workflows/event-bridge-offline.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  offline-unittest:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Run isolated T1-T3 and idempotency regression
+        run: python -m unittest discover -s experiments/event-bridge-v0.1 -p 'test_*.py' -v
